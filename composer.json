@@ -7,8 +7,8 @@
         "php": ">=5.6"
     },
     "autoload": {
-        "psr-0": {
-            "Tokotalk": "src/"
+        "psr-4": {
+            "Tokotalk\\": "src/"
         }
     },
     "require-dev": {
