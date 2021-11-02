@@ -74,7 +74,7 @@ class ApiRequestWithBody
 
         curl_close($curl);
 
-        $data = json_decode(utf8_decode($response));
+        $data = json_decode(utf8_encode($response));
 
         if ($err) {
             return $err;
