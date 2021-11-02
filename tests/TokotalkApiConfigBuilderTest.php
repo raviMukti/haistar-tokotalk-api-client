@@ -4,6 +4,7 @@
 use PHPUnit\Framework\TestCase;
 use Tokotalk\client\TokotalkApiConfig;
 use Tokotalk\client\TokotalkApiConfigBuilder;
+use Tokotalk\request\TokotalkApiRequest;
 
 class TokotalkApiConfigBuilderTest extends TestCase
 {
