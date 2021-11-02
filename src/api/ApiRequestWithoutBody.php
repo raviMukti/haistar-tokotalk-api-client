@@ -26,7 +26,6 @@ class ApiRequestWithoutBody
     {
 
         // Validate Input
-        /** @var TokotalkApiConfig $apiConfig */
         if ($apiConfig->getPartnerId() == '') throw new Exception("Input of [PartnerId] is empty!");
         if ($apiConfig->getPartnerPass() == '') throw new Exception("Input of [PartnerPass] is empty!");
         if ($apiConfig->getVendorId() == '') throw new Exception("Input of [VendorId] is empty!");
@@ -74,7 +73,7 @@ class ApiRequestWithoutBody
 
         curl_close($curl);
 
-        $data = json_decode($response);
+        $data = json_decode(utf8_decode($response));
 
         if ($err) {
             return $err;
